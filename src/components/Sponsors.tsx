@@ -11,7 +11,10 @@ export const Sponsors = () => {
       </div>
       <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">
         {sponsors.map((sponsor) => (
-          <div key={sponsor.id} className="pt-2 text-gray-400 dark:text-gray-400">
+          <div
+            key={sponsor.id}
+            className="pt-2 text-gray-400 dark:text-gray-400"
+          >
             <Image
               src={sponsor.logo}
               width={sponsor.width}

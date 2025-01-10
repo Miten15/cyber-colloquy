@@ -4,7 +4,14 @@ import React from "react";
 import { Container } from "@/components/Container";
 
 export function Footer() {
-  const navigation = ["Achievements", "Patents", "Events", "Projects", "Department Info", "Contact Us"];
+  const navigation = [
+    "Achievements",
+    "Patents",
+    "Events",
+    "Projects",
+    "Department Info",
+    "Contact Us",
+  ];
   const legal = ["Terms", "Privacy", "Legal"];
   return (
     <div className="relative">
@@ -28,16 +35,17 @@ export function Footer() {
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Cyber Colloquy is the website for the Cyber Security Department at Shah and Anchor Kutchhi Engineering College.
+              Cyber Colloquy is the website for the Cyber Security Department at
+              Shah and Anchor Kutchhi Engineering College.
             </div>
           </div>
-            
+
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {navigation.map((item, index) => (
                 <Link
                   key={index}
-                  href={`/${item.toLowerCase().replace(' ', '-')}`}
+                  href={`/${item.toLowerCase().replace(" ", "-")}`}
                   className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
                 >
                   {item}
@@ -61,40 +69,29 @@ export function Footer() {
           <div className="">
             <div>Follow us</div>
             <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
-                <a
-                    href="https://twitter.com/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <span className="sr-only">Twitter</span>
-                  <Twitter />
-                </a>
-                <a
-                    href="https://facebook.com/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <span className="sr-only">Facebook</span>
-                  <Facebook />
-                </a>
-                <a
-                    href="https://instagram.com/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <span className="sr-only">Instagram</span>
-                  <Instagram />
-                </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener">
-                  <span className="sr-only">Linkedin</span>
-                  <Linkedin />
-                </a>
-              </div>
+              <a href="https://twitter.com/" target="_blank" rel="noopener">
+                <span className="sr-only">Twitter</span>
+                <Twitter />
+              </a>
+              <a href="https://facebook.com/" target="_blank" rel="noopener">
+                <span className="sr-only">Facebook</span>
+                <Facebook />
+              </a>
+              <a href="https://instagram.com/" target="_blank" rel="noopener">
+                <span className="sr-only">Instagram</span>
+                <Instagram />
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener">
+                <span className="sr-only">Linkedin</span>
+                <Linkedin />
+              </a>
             </div>
           </div>
+        </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by Shah and Anchor Kutchhi Engineering College.
+          Copyright © {new Date().getFullYear()}. Made with ♥ by Shah and Anchor
+          Kutchhi Engineering College.
         </div>
       </Container>
     </div>

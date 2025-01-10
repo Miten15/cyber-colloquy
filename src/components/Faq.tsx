@@ -1,7 +1,11 @@
 "use client";
 import React from "react";
 import { Container } from "@/components/Container";
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
 
 export const Faq = () => {
@@ -55,8 +59,9 @@ const faqdata = [
     answer:
       "Certificates will be provided after successful completion of some workshops and some competitions. Please follow the event details to learn more about this.",
   },
-    {
-      question: "How do I contact the organizers?",
-      answer: "Please visit the Contact Us page on our website to connect with us.",
-    },
+  {
+    question: "How do I contact the organizers?",
+    answer:
+      "Please visit the Contact Us page on our website to connect with us.",
+  },
 ];

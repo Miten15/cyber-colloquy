@@ -11,7 +11,8 @@ export const Cta = () => {
             Ready to Join Cyber Colloquy?
           </h2>
           <p className="mt-2 font-medium text-white text-opacity-90 lg:text-xl">
-            Don&apos;t miss out on the opportunity to expand your knowledge, network with experts and participate in exciting competitions!
+            Don&apos;t miss out on the opportunity to expand your knowledge,
+            network with experts and participate in exciting competitions!
           </p>
         </div>
         <div className="flex-shrink-0 w-full text-center lg:w-auto">
