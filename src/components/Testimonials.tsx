@@ -13,12 +13,12 @@ export const Testimonials = () => {
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              "The Cyber Colloquy events are always informative and have broadened my knowledge in cybersecurity."
+              &quot;The Cyber Colloquy events are always informative and have broadened my knowledge in cybersecurity.&quot;
             </p>
 
             <Avatar
               image={userOneImg}
-              name="priya sharma"
+              name="Archita jain"
               title="Student at Shah and Anchor"
             />
           </div>
@@ -26,7 +26,7 @@ export const Testimonials = () => {
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              "I have participated in several Cyber Colloquy events, and I have greatly benefited from all of them."
+              &quot;I have participated in several Cyber Colloquy events, and I have greatly benefited from all of them.&quot;
             </p>
 
             <Avatar
@@ -39,7 +39,7 @@ export const Testimonials = () => {
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              "The workshops and events organized by the Cyber Security Department at Shah and Anchor College have been very helpful for me."
+              &quot;The workshops and events organized by the Cyber Security Department at Shah and Anchor College have been very helpful for me.&quot;
             </p>
 
             <Avatar
