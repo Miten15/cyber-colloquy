@@ -21,7 +21,8 @@
   "author": "Surjith S M",
   "license": "ISC",
   "dependencies": {
-    "@headlessui/react": "^2.0.3",
+    "@eslint/config-array": "^0.19.1",
+    "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.1.3",
     "next": "^15.1.4",
     "next-themes": "^0.3.0",
@@ -33,8 +34,8 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.1.4",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
