@@ -30,7 +30,7 @@ export default function Home() {
       Discover the various projects, achievements, events, and research initiatives carried out by our department. Dive into the world of Cyber Security with us.
       </SectionTitle>
 
-      <Video videoId="fZ0D0cnR88E" />
+      <Video videoId="dQw4w9WgXcQ" />
 
       <SectionTitle
         preTitle="Student & Faculty Highlights"
