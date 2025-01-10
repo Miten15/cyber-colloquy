@@ -112,10 +112,10 @@ export default function DepartmentInfoPage() {
           Electronics and Telecommunication program is accredited by NBA for 3 years from AY 2024-25.
         </p>
         <p className="text-gray-700 dark:text-gray-300 text-lg mb-6">
-          Accredited with 'A' Grade (2021) by NAAC for 5 years
+          Accredited with &apos;A&apos; Grade (2021) by NAAC for 5 years.
         </p>
         <p className="text-gray-700 dark:text-gray-300 text-lg">
-          Ranked in band 251-300 (2020) by NIRF
+          Ranked in band 251-300 (2020) by NIRF.
         </p>
       </Section>
     </Container>
