@@ -13,12 +13,12 @@ import { benefitOne, benefitTwo } from "@/components/data";
 export default function Home() {
   return (
     <Container>
-      {/* <Hero /> */}
       <HeroBanner
-        imageUrl="/img/events/colloquy4.0_banner.png"
+        imageUrl="/img/events/colloquy4.0_banner_2.png"
         title="Cyber Colloquy 4.0: From compliance to confidence"
         description=""
       />
+      <Hero />
       <SectionTitle
         preTitle="Cyber Security Department"
         title="Welcome to Cyber Colloquy 4.0"
@@ -28,7 +28,6 @@ export default function Home() {
           4.0 event.
         </p>
       </SectionTitle>
-      
 
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />

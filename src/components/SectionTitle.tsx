@@ -16,7 +16,7 @@ export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
       }`}
     >
       {props.preTitle && (
-        <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+        <div className="max-w-2xl mt-3 text-3xl text-sm leading-snug font-bold tracking-wider text-indigo-600 uppercase lg:leading-tight lg:text-2xl">
           {props.preTitle}
         </div>
       )}
