@@ -7,6 +7,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
 import { HeroBanner } from "@/components/HeroBanner";
+import { Impact } from "@/components/impact";
 
 import { benefitOne, benefitTwo } from "@/components/data";
 
@@ -31,6 +32,8 @@ export default function Home() {
 
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
+
+      <Impact />
 
       <SectionTitle
         preTitle="Explore Our Work"

@@ -1,65 +1,78 @@
-// src/app/achievements/page.tsx
-import { Container } from "@/components/Container";
-import { SectionTitle } from "@/components/SectionTitle";
-import Image from "next/image";
-import Link from "next/link";
-import achievementsData from "@/components/achievementsData";
+"use client"
 
-interface Achievement {
-  id: number;
-  name: string;
-  date: string;
-  achievement: string;
-  details: string;
-  link?: string;
-  banner?: string;
-}
+import { useState } from "react"
+import { Container } from "@/components/Container"
+import { SectionTitle } from "@/components/SectionTitle"
+import { ExpandableCard } from "@/components/expandable-card"
+import achievementsData from "@/components/achievementsData"
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination"
+
+const ITEMS_PER_PAGE = 6
+
+const formattedAchievements = achievementsData.map(achievement => ({
+  title: achievement.achievement,
+  description: achievement.name,
+  src: achievement.banner || '/placeholder.svg?height=400&width=600',
+  date: achievement.date,
+  content: achievement.details
+}))
 
 export default function AchievementsPage() {
+  const [currentPage, setCurrentPage] = useState(1)
+  const totalPages = Math.ceil(formattedAchievements.length / ITEMS_PER_PAGE)
+
   return (
     <Container>
       <SectionTitle preTitle="Our College" title="CYSE Achievements">
-        Here is the achievements of our Cyber Security Department.
+        Here are the achievements of our Cyber Security Department.
       </SectionTitle>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {achievementsData.map((achievement: Achievement) => (
-          <div
-            key={achievement.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden"
-          >
-            {achievement.banner && (
-              <div className="relative h-48 md:h-60">
-                <Image
-                  src={achievement.banner}
-                  alt={achievement.achievement}
-                  fill
-                  className="object-cover"
+
+      <div className="mt-12 space-y-8">
+        <ExpandableCard 
+          cards={formattedAchievements}
+          currentPage={currentPage}
+          itemsPerPage={ITEMS_PER_PAGE}
+        />
+
+        <div className="flex justify-center">
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious
+                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                  className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
                 />
-              </div>
-            )}
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2">
-                {achievement.achievement}
-              </h3>
-              <p className="text-gray-600 mb-2">{achievement.name}</p>
-              <p className="text-gray-600 mb-2">{achievement.date}</p>
-              <p className="text-gray-700">{achievement.details}</p>
-              {achievement.link && (
-                  <div className="mt-4">
-                    <Link
-                      href={achievement.link}
-                      target="_blank"
-                      rel="noopener"
-                      className="text-indigo-600 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-100"
-                    >
-                      Learn More
-                    </Link>
-                  </div>
-                )}
-            </div>
-          </div>
-        ))}
+              </PaginationItem>
+              
+              {[...Array(totalPages)].map((_, i) => (
+                <PaginationItem key={i}>
+                  <PaginationLink
+                    onClick={() => setCurrentPage(i + 1)}
+                    isActive={currentPage === i + 1}
+                    className="cursor-pointer"
+                  >
+                    {i + 1}
+                  </PaginationLink>
+                </PaginationItem>
+              ))}
+
+              <PaginationItem>
+                <PaginationNext
+                  onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                  className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        </div>
       </div>
     </Container>
-  );
+  )
 }
