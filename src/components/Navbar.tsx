@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 "use client";
 import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
@@ -13,24 +12,24 @@ export const Navbar = () => {
     { label: "Events", href: "/events" },
     { label: "Projects", href: "/projects" },
   ];
- const infoLinks = [
-      { label: "Department Info", href: "/department-info" },
-      { label: "Faculty", href: "/about" },
-  ]
+  const infoLinks = [
+    { label: "Department Info", href: "/department-info" },
+    { label: "Faculty", href: "/about" },
+  ];
   const [infoOpen, setInfoOpen] = useState(false);
-    const infoRef = useRef<HTMLDivElement>(null);
-      useEffect(() => {
-        function handleClickOutside(event: MouseEvent) {
-          if (infoRef.current && !infoRef.current.contains(event.target as Node)) {
-            setInfoOpen(false);
-          }
-        }
+  const infoRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (infoRef.current && !infoRef.current.contains(event.target as Node)) {
+        setInfoOpen(false);
+      }
+    }
 
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-          document.removeEventListener("mousedown", handleClickOutside);
-        };
-      }, [infoRef, setInfoOpen]);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [infoRef, setInfoOpen]);
 
   return (
     <div className="w-full">
@@ -56,7 +55,7 @@ export const Navbar = () => {
           <ThemeChanger />
           <div className="hidden mr-3 lg:flex nav__item">
             <Link
-              href="/"
+              href="/register"
               className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
             >
               Get Started
@@ -66,7 +65,7 @@ export const Navbar = () => {
 
         <Disclosure>
           {({ open }) => (
-            <>
+             <div> {/* ADDED DIV WRAPPER */}
               <Disclosure.Button
                 aria-label="Toggle Menu"
                 className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700"
@@ -103,29 +102,31 @@ export const Navbar = () => {
                       {item.label}
                     </Link>
                   ))}
-                    <div ref={infoRef}>
-                   <Disclosure>
-                      {({ open }) => (
-                           <>
-                              <Disclosure.Button  onClick={() => setInfoOpen(!infoOpen)} className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
-                                  Info
-                              </Disclosure.Button>
-                               <Disclosure.Panel  className="flex flex-wrap w-full ml-4 my-1 ">
-                                 {infoLinks.map((item, index) => (
+                  <div ref={infoRef}>
+                    <Disclosure>
+                       {({ open }) => ( /* ADDED DIV WRAPPER */
+                          <>
+                            <div>
+                               <Disclosure.Button  onClick={() => setInfoOpen(!infoOpen)} className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
+                                    Info
+                                </Disclosure.Button>
+                                  <Disclosure.Panel  className="flex flex-wrap w-full ml-4 my-1 ">
+                                   {infoLinks.map((item, index) => (
                                     <Link
-                                         key={index}
-                                        href={item.href}
-                                         className="w-full px-4 py-2  text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
-                                   >
+                                          key={index}
+                                          href={item.href}
+                                          className="w-full px-4 py-2  text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none"
+                                       >
                                         {item.label}
-                                   </Link>
-                                 ))}
-                              </Disclosure.Panel>
-                             </>
-                       )}
-                   </Disclosure>
-                      </div>
-                    <Link
+                                     </Link>
+                                   ))}
+                                 </Disclosure.Panel>
+                            </div>
+                          </>
+                        )}
+                    </Disclosure>
+                  </div>
+                  <Link
                     href="/"
                     className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
                   >
@@ -133,7 +134,7 @@ export const Navbar = () => {
                   </Link>
                 </>
               </Disclosure.Panel>
-            </>
+              </div>
           )}
         </Disclosure>
 
@@ -150,30 +151,33 @@ export const Navbar = () => {
                 </Link>
               </li>
             ))}
-              <div ref={infoRef}>
-                <Disclosure>
-                     {({ open }) => (
-                         <>
-                            <Disclosure.Button onClick={() => setInfoOpen(!infoOpen)}
-                                  className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
-                                >
-                                About Us
-                           </Disclosure.Button>
-                            <Disclosure.Panel className="absolute z-10  bg-white dark:bg-gray-800  rounded-md shadow-lg p-2">
-                               {infoLinks.map((item, index) => (
-                                <Link
-                                      key={index}
-                                      href={item.href}
-                                       className="block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
-                                    >
-                                     {item.label}
-                                  </Link>
-                                ))}
-                           </Disclosure.Panel>
-                         </>
-                    )}
-                </Disclosure>
-              </div>
+            <div ref={infoRef}>
+              <Disclosure>
+                  {({ open }) => ( /* ADDED DIV WRAPPER */
+                   <>
+                   <div>
+                     <Disclosure.Button
+                          onClick={() => setInfoOpen(!infoOpen)}
+                         className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                         >
+                          About Us
+                       </Disclosure.Button>
+                       <Disclosure.Panel className="absolute z-10  bg-white dark:bg-gray-800  rounded-md shadow-lg p-2">
+                       {infoLinks.map((item, index) => (
+                        <Link
+                           key={index}
+                           href={item.href}
+                            className="block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                          >
+                            {item.label}
+                         </Link>
+                        ))}
+                      </Disclosure.Panel>
+                      </div>
+                   </>
+                     )}
+              </Disclosure>
+            </div>
           </ul>
         </div>
       </nav>

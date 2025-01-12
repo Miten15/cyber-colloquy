@@ -30,7 +30,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
             <p className="text-gray-300">{description}</p>
           </div>
           <Link
-            href="/events/5"
+            href="/register"
             className="px-6 py-2 text-white bg-indigo-600 rounded-md"
           >
             Register Now!
