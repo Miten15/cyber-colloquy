@@ -19,9 +19,14 @@ export default function Home() {
       description: ""
     },
     {
-      imageUrl: "/img/events/colloquy4.0_banner_2.png",
+      imageUrl: "/img/events/banner2.png",
       title: "",
-      description: "Description for banner 2"
+      description: ""
+    },
+    {
+      imageUrl: "/img/events/banner3.png",
+      title: "",
+      description: ""
     },
     // Add more slides as needed
   ];
