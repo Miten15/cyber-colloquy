@@ -2,13 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { cn } from '../../lib/utils'
-
-export interface TimelineEvent {
-  date: string
-  title: string
-  description: string
-  status: 'completed' | 'current' | 'upcoming'
-}
+import { ExpandableTimelineCard, TimelineEvent } from './expandable-timeline-card'
 
 interface TimelineProps {
   events: TimelineEvent[]
@@ -23,7 +17,7 @@ export default function Timeline({ events, className }: TimelineProps) {
   return (
     <div className={cn("relative py-8", className)}>
       {/* Vertical line */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-blue-200 dark:bg-blue-900" />
+      <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-600" />
       
       <div className="space-y-12">
         {events.map((event, index) => (
@@ -32,32 +26,24 @@ export default function Timeline({ events, className }: TimelineProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2 }}
-            className={`relative flex items-center ${
-              index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-            }`}
+            className={cn(
+              "relative flex items-center",
+              index % 2 === 0 ? "justify-start" : "justify-end"
+            )}
           >
             {/* Dot */}
             <div 
               className={cn(
-                "absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full",
+                "absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full z-10",
                 event.status === 'completed' ? 'bg-green-500' :
                 event.status === 'current' ? 'bg-blue-500' :
-                'bg-gray-300'
+                'bg-gray-500'
               )}
             />
             
             {/* Content */}
-            <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12' : 'pl-12'}`}>
-              <div className={cn(
-                "bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg",
-                event.status === 'completed' ? 'border-l-4 border-green-500' :
-                event.status === 'current' ? 'border-l-4 border-blue-500' :
-                'border-l-4 border-gray-300'
-              )}>
-                <div className="text-sm text-gray-500 dark:text-gray-400">{event.date}</div>
-                <h4 className="text-lg font-semibold mb-2 dark:text-white">{event.title}</h4>
-                <p className="text-gray-600 dark:text-gray-300">{event.description}</p>
-              </div>
+            <div className={cn("w-5/12", index % 2 === 0 ? "pr-8" : "pl-8")}>
+              <ExpandableTimelineCard event={event} isEven={index % 2 !== 0} />
             </div>
           </motion.div>
         ))}

@@ -45,7 +45,7 @@ export function EventCard({ id, title, date, description, year, image, conducted
         <div className="relative h-full p-6 flex flex-col justify-between z-10">
           {/* Top Content */}
           <div className="flex justify-between items-start">
-            <span className="px-3 py-1 bg-blue-500/20 text-purple-400 text-sm font-medium rounded-full">
+            <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm font-medium rounded-full">
               {year}
             </span>
             <span className="text-purple-400 text-sm">{date}</span>
@@ -89,7 +89,7 @@ export function EventCard({ id, title, date, description, year, image, conducted
         </div>
 
         {/* Animated Border */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 to-purple-800 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-purple-800 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
       </motion.div>
     </Link>
   )
