@@ -32,7 +32,9 @@ export default function EventDetailsPage() {
 
   // Convert activities to timeline events
   const timelineEvents: TimelineEvent[] = normalizedActivities.reduce((acc: TimelineEvent[], activity) => {
-    const activityDate = activity.date || `${event.date.split(',')[0]} ${activity.time}`;
+    // Update: If activity.date exists, use it, otherwise fallback to event.date without time
+    const activityDate = activity.date || event.date.split(',')[0];
+
     const existingEvent = acc.find(e => e.date === activityDate);
 
     if (existingEvent) {
