@@ -2,36 +2,25 @@
 import React from "react";
 
 interface SectionTitleProps {
-  preTitle?: string;
-  title?: string;
-  align?: "left" | "center";
-  children?: React.ReactNode;
+    preTitle?: string;
+    title: string;
+    children?: React.ReactNode;
 }
 
-export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
+ const SectionTitle: React.FC<SectionTitleProps> = ({
+     preTitle,
+     title,
+     children,
+  }) => {
   return (
-    <div
-      className={`flex w-full flex-col mt-4 ${
-        props.align === "left" ? "" : "items-center justify-center text-center"
-      }`}
-    >
-      {props.preTitle && (
-        <div className="max-w-2xl mt-3 text-3xl text-sm leading-snug font-bold tracking-wider text-indigo-600 uppercase lg:leading-tight lg:text-2xl">
-          {props.preTitle}
-        </div>
-      )}
-
-      {props.title && (
-        <h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-          {props.title}
+     <>
+       {preTitle && <p className="text-indigo-600 font-bold text-lg">{preTitle}</p>}
+        <h2 className="text-2xl font-bold text-gray-800 md:text-4xl dark:text-white">
+             {title}
         </h2>
-      )}
-
-      {props.children && (
-        <p className="max-w-2xl py-4 text-lg leading-normal text-gray-700 dark:text-gray-300">
-          {props.children}
-        </p>
-      )}
-    </div>
-  );
+         {children && <div className="max-w-2xl py-4">{children}</div>}
+      </>
+   );
 };
+
+export { SectionTitle };

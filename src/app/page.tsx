@@ -14,13 +14,13 @@ import { benefitOne, benefitTwo } from "@/components/data";
 export default function Home() {
   const heroSlides = [
     {
-      imageUrl: "/img/events/colloquy4.0_banner.png",
-      title: "Cyber Colloquy 4.0: From compliance to confidence - Banner 1",
-      description: "Description for banner 1"
+      imageUrl: "/img/events/colloquy4.0_banner_2.png",
+      title: "",
+      description: ""
     },
     {
-      imageUrl: "/img/events/colloquy4.0_banner.png",
-      title: "Cyber Colloquy 4.0: From compliance to confidence - Banner 2",
+      imageUrl: "/img/events/colloquy4.0_banner_2.png",
+      title: "",
       description: "Description for banner 2"
     },
     // Add more slides as needed

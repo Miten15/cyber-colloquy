@@ -386,7 +386,7 @@ const events = [
     date: "21st to 24th March",
     description: "Adopting the new rules for a privacy-centric future",
     location: "Seminar Hall",
-    images: ["/img/events/event9.jpg", "/img/events/event10.jpg"],
+    images: ["/img/events/colloquy4.0_banner.png", "/img/events/event10.jpg"],
     tags: ["cybersecurity", "colloquy", "quantum computing", "data science"],
     colloquyDetails: {
       conductedBy: "Dr. Eva Brown",

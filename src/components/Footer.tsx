@@ -90,8 +90,7 @@ export function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by Shah and Anchor
-          Kutchhi Engineering College.
+          Copyright © {new Date().getFullYear()}Cyber Security Department
         </div>
       </Container>
     </div>
