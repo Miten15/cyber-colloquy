@@ -19,6 +19,7 @@ const stats = [
     number: 600,
     label: "CIO/CISO Trained in Strategy Program",
     icon: <Lightbulb className="h-12 w-12" />
+    
   },
   {
     number: 600,
