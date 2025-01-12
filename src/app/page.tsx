@@ -1,3 +1,4 @@
+// pages/index.tsx
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -6,20 +7,34 @@ import { Video } from "@/components/Video";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
-import { HeroBanner } from "@/components/HeroBanner";
 import { Impact } from "@/components/impact";
-
+import HeroCarousel from "@/components/HeroCarousel";  // Import HeroCarousel
 import { benefitOne, benefitTwo } from "@/components/data";
 
 export default function Home() {
+  const heroSlides = [
+    {
+      imageUrl: "/img/events/colloquy4.0_banner.png",
+      title: "Cyber Colloquy 4.0: From compliance to confidence - Banner 1",
+      description: "Description for banner 1"
+    },
+    {
+      imageUrl: "/img/events/colloquy4.0_banner.png",
+      title: "Cyber Colloquy 4.0: From compliance to confidence - Banner 2",
+      description: "Description for banner 2"
+    },
+    // Add more slides as needed
+  ];
+
   return (
     <Container>
-      <HeroBanner
-        imageUrl="/img/events/colloquy4.0_banner_2.png"
-        title="Cyber Colloquy 4.0: From compliance to confidence"
-        description=""
-      />
+      {/* Add the HeroCarousel component */}
+      <HeroCarousel slides={heroSlides} />
+
+      {/* Hero Section */}
       <Hero />
+
+      {/* Other Sections */}
       <SectionTitle
         preTitle="Cyber Security Department"
         title="Welcome to Cyber Colloquy 4.0"
@@ -45,7 +60,6 @@ export default function Home() {
           Cyber Security with us.
         </p>
       </SectionTitle>
-
       <Video videoId="dQw4w9WgXcQ" />
 
       <SectionTitle
@@ -57,7 +71,6 @@ export default function Home() {
           and collaborative environment of our department.
         </p>
       </SectionTitle>
-
       <Testimonials />
 
       <SectionTitle
@@ -69,7 +82,6 @@ export default function Home() {
           or any cyber security related questions.
         </p>
       </SectionTitle>
-
       <Faq />
       <Cta />
     </Container>
