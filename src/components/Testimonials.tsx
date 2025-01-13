@@ -13,12 +13,12 @@ export const Testimonials = () => {
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              &quot;The events I've attended have consistently provided valuable insights and practical knowledge to improve my skill set.&quot;
+              &quot;The events I&apos;ve attended have consistently provided valuable insights and practical knowledge to improve my skill set.&quot;
             </p>
 
             <Avatar
               image={userOneImg}
-              name="Archita jain"
+              name="Archita Jain"
               title="Student at Shah and Anchor"
             />
           </div>
@@ -31,7 +31,7 @@ export const Testimonials = () => {
 
             <Avatar
               image={userTwoImg}
-              name="Mahesh annayboeina"
+              name="Mahesh Annayboeina"
               title="Faculty at Shah and Anchor"
             />
           </div>
@@ -44,7 +44,7 @@ export const Testimonials = () => {
 
             <Avatar
               image={userThreeImg}
-              name="Saahil sawant"
+              name="Saahil Sawant"
               title="Alumnus of Shah and Anchor"
             />
           </div>
