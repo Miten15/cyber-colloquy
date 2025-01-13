@@ -11,8 +11,8 @@ import benefitOneImg from "../../public/img/benefit-one.png";
 import benefitTwoImg from "../../public/img/benefit-two.png";
 
 const benefitOne = {
-  title: "Why Attend Cyber Colloquy?",
-  desc: "Discover the unique benefits and learning opportunities that our Cyber Colloquy events offer. Find out how you can contribute and grow.",
+  title: "Why Attend Cyber Events?",
+  desc: "Explore the benefits and learning opportunities offered by different cyber events. Find out how you can contribute and grow in this industry.",
   image: benefitOneImg,
   bullets: [
     {
@@ -22,77 +22,77 @@ const benefitOne = {
     },
     {
       title: "Hands-on Workshops",
-      desc: "Participate in practical workshops to develop practical cybersecurity skills.",
+      desc: "Participate in practical workshops to develop essential cybersecurity skills.",
       icon: <ChartBarSquareIcon />,
     },
     {
       title: "Networking Opportunities",
-      desc: "Connect with fellow students, faculty, and professionals, and participate in discussions on current cybersecurity trends.",
+      desc: "Connect with peers, experts, and potential mentors and partners.",
       icon: <CursorArrowRaysIcon />,
     },
   ],
 };
 
 const benefitTwo = {
-  title: "What to Expect at Cyber Colloquy 4.0?",
-  desc: "Get a glimpse of what awaits you at our latest edition of Cyber Colloquy. This year’s program is set to provide more opportunities and knowledge for all attendees.",
+  title: "What You Can Expect From Our Events?",
+  desc: "Get a glimpse of what awaits you in our diverse range of cyber events. Each event offers a unique program with its own specific goals.",
   image: benefitTwoImg,
   bullets: [
     {
-      title: "Engaging Panel Discussions",
-      desc: "Participate in insightful discussions that will cover various aspects of cybersecurity.",
+      title: "Engaging Discussions",
+      desc: "Participate in insightful discussions on different topics of cybersecurity.",
       icon: <DevicePhoneMobileIcon />,
     },
     {
-      title: "Guest Speakers",
-      desc: "Learn from experts and leaders in the field of cybersecurity, sharing their experience and knowledge.",
+      title: "Renowned Speakers",
+      desc: "Learn from leaders and experts in the field of cybersecurity.",
       icon: <AdjustmentsHorizontalIcon />,
     },
-    {
+      {
       title: "Exciting Competitions",
-      desc: "Participate in the various competitions that are being held to test your knowledge and skills in the cyber security field.",
+      desc: "Participate in competitions and put your knowledge to test!",
       icon: <SunIcon />,
     },
   ],
 };
 
 const events = [
-    {
-      id: 1,
-      title: "Cybersecurity Colloquy 2021",
-      year: 2021,
-      date: "November 20, 2021",
-      description: "Our first-ever Cybersecurity Colloquy event.",
-      location: "Main Auditorium",
-      images: ["/img/events/2021/event1.jpg", "/img/events/2021/event2.jpg"],
-      tags: ["cybersecurity", "colloquy", "networking"],
-      colloquyDetails: {
-        conductedBy: "Dr. John Doe",
-        topics: ["Ethical Hacking", "Network Security", "Cryptography"],
-        activities: [
-          {
-            time: "10:00 AM",
-            description: "Inauguration and Keynote Session",
-            image: "/img/events/2021/activity1.jpg",
-          },
-          {
-            time: "11:30 AM",
-            description: "Workshop on Ethical Hacking Basics",
-            image: "/img/events/2021/activity2.jpg",
-          },
-          {
-            time: "02:00 PM",
-            description: "Panel Discussion: Future of Cybersecurity",
-            image: "/img/events/2021/activity3.jpg",
-          },
-          {
-            time: "04:00 PM",
-            description: "Closing Ceremony and Networking",
-            image: "/img/events/2021/activity4.jpg",
-          },
-        ],
-      },
-      activities: [
+  {
+    id: 1,
+    title: "Cybersecurity Colloquy 2021",
+    year: 2021,
+    date: "November 20, 2021",
+    description: "Our first ever Cybersecurity Colloquy event.",
+    location: "Main Auditorium",
+    images: ["/img/events/2021/event1.jpg", "/img/events/2021/event2.jpg"],
+    tags: ["cybersecurity", "colloquy", "networking"],
+    colloquyDetails: {
+      conductedBy: "Dr. John Doe",
+      topics: ["Ethical Hacking", "Network Security", "Cryptography"],
+       activities: [
+              {
+              time: "10:00 AM",
+                description: "Inauguration and Keynote Session",
+                image: "/img/events/2021/activity1.jpg",
+            },
+             {
+               time: "11:30 AM",
+               description: "Workshop on Ethical Hacking Basics",
+                image: "/img/events/2021/activity2.jpg",
+              },
+            {
+                time: "02:00 PM",
+              description: "Panel Discussion: Future of Cybersecurity",
+                image: "/img/events/2021/activity3.jpg",
+               },
+             {
+                time: "04:00 PM",
+                description: "Closing Ceremony and Networking",
+              image: "/img/events/2021/activity4.jpg",
+            },
+          ],
+    },
+     activities: [
         {
           date: "21st March",
           description: "Inauguration and Keynote Session",
@@ -134,7 +134,7 @@ const events = [
           image: "/img/events/activity8.jpg",
         },
       ],
-    },
+  },
     {
       id: 2,
       title: "Cybersecurity Colloquy 2022",
@@ -174,7 +174,7 @@ const events = [
           },
         ],
       },
-      activities: [
+        activities: [
         {
           date: "21st March",
           description: "Inauguration and Keynote Session",
@@ -222,7 +222,7 @@ const events = [
       title: "Cybersecurity Colloquy 2023",
       year: 2023,
       date: "October 25, 2023",
-      description: "Our third annual Cybersecurity Colloquy event.",
+      description: "Our annual Cybersecurity Colloquy event.",
       location: "Conference Room",
       images: ["/img/events/2023/event1.jpg", "/img/events/2023/event2.jpg"],
       tags: ["cybersecurity", "colloquy", "cloud computing", "data science"],
@@ -252,7 +252,7 @@ const events = [
           },
         ],
       },
-      activities: [
+         activities: [
         {
           date: "21st March",
           description: "Inauguration and Keynote Session",
@@ -335,7 +335,7 @@ const events = [
           },
         ],
       },
-      activities: [
+        activities: [
         {
           date: "21st March",
           description: "Inauguration and Keynote Session",
@@ -386,7 +386,7 @@ const events = [
     date: "21st to 24th March",
     description: "Adopting the new rules for a privacy-centric future",
     location: "Seminar Hall",
-    images: ["/img/events/colloquy4.0_banner.png", "/img/events/event10.jpg"],
+    images: ["/img/events/event9.jpg", "/img/events/event10.jpg"],
     tags: ["cybersecurity", "colloquy", "quantum computing", "data science"],
     colloquyDetails: {
       conductedBy: "Dr. Eva Brown",
@@ -436,5 +436,5 @@ const events = [
     ],
   },
 ];
-
-export { benefitOne, benefitTwo, events };
+  
+  export { benefitOne, benefitTwo, events };

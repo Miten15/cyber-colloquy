@@ -40,28 +40,33 @@ export const Faq = () => {
 
 const faqdata = [
   {
-    question: "What is Cyber Colloquy?",
+    question: "What types of cyber events are listed on this website?",
     answer:
-      "Cyber Colloquy is an annual event organized by the Cyber Security Department of Shah and Anchor Kutchhi Engineering College, featuring workshops, lectures, and competitions.",
+      "This website provides information about various cyber-related events, including workshops, conferences, webinars, CTF challenges, and more.",
   },
   {
-    question: "How can I participate in Cyber Colloquy?",
+    question: "How can I register for a cyber event?",
     answer:
-      "Registration details are posted on our website. You can follow the details for registration by going to the events section. ",
+      "Registration details are provided on each individual event page. Look for the 'Register Now' button and follow the instructions.",
   },
   {
-    question: "Are there any entry requirements for Cyber Colloquy?",
+    question: "Are there any fees for attending the cyber events?",
     answer:
-      "There are no specific entry requirements, but some workshops and events might be aimed at specific skill sets. Details are mentioned for each event.",
+      "The fees vary for each event. Some events may be free, while others may have an entry fee, the pricing will be listed on each event.",
   },
   {
-    question: "Can I get certifications after attending the events?",
+    question: "Will I receive a certificate after attending an event?",
     answer:
-      "Certificates will be provided after successful completion of some workshops and some competitions. Please follow the event details to learn more about this.",
+      "Certificates are usually provided for some workshops and training events, and you will need to check specific event pages for more information about certificates.",
   },
   {
-    question: "How do I contact the organizers?",
+    question: "How can I contact the organizers for a specific event?",
     answer:
-      "Please visit the Contact Us page on our website to connect with us.",
+      "Contact information is usually listed with the details for the specific events. Otherwise you can also use the contact us page.",
+  },
+  {
+    question: "Where can I find information about the speakers for the events?",
+    answer:
+      "Speaker information can be found on the details pages for each event. This will give you details about the experts that are presenting in these events.",
   },
 ];

@@ -42,11 +42,10 @@ export default function Home() {
       {/* Other Sections */}
       <SectionTitle
         preTitle="Cyber Security Department"
-        title="Welcome to Cyber Colloquy 4.0"
+        title="Welcome to Our Cyber Event Platform"
       >
         <p className="text-gray-700 dark:text-gray-300">
-          Explore the world of cybersecurity at SAKEC through the Cyber Colloquy
-          4.0 event.
+        Our source for all events, achievements, projects, and more from various cyber security communities.
         </p>
       </SectionTitle>
 

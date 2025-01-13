@@ -10,7 +10,7 @@ import { PopupWidget } from "@/components/PopupWidget";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Colloquy",
+  title: "Cyber Security Events",
   description: "Cyber security",
   icons: {
     icon: "/img/favicon2.png",

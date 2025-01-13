@@ -13,8 +13,7 @@ export const Testimonials = () => {
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              &quot;The Cyber Colloquy events are always informative and have
-              broadened my knowledge in cybersecurity.&quot;
+              &quot;The events I've attended have consistently provided valuable insights and practical knowledge to improve my skill set.&quot;
             </p>
 
             <Avatar
@@ -27,8 +26,7 @@ export const Testimonials = () => {
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              &quot;I have participated in several Cyber Colloquy events, and I
-              have greatly benefited from all of them.&quot;
+              &quot;I greatly appreciate the high quality of speakers and the networking opportunities that were present in these events&quot;
             </p>
 
             <Avatar
@@ -41,9 +39,7 @@ export const Testimonials = () => {
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              &quot;The workshops and events organized by the Cyber Security
-              Department at Shah and Anchor College have been very helpful for
-              me.&quot;
+              &quot;I highly recommend this platform to anyone that is looking to explore the different areas of cybersecurity and wants to improve their expertise.&quot;
             </p>
 
             <Avatar

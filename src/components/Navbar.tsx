@@ -46,7 +46,7 @@ export const Navbar = () => {
                 className="w-8"
               />
             </span>
-            <span>Cyber Colloquy</span>
+            <span>Cyber Events</span>
           </span>
         </Link>
 

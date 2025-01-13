@@ -24,18 +24,18 @@ export function Footer() {
                 className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100"
               >
                 <Image
-                  src="/img/logo.svg"
-                  alt="Cyber Colloquy"
+                  src="/img/favicon2.png"
+                  alt="Cyber Events"
                   width="32"
                   height="32"
                   className="w-8"
                 />
-                <span>Cyber Colloquy</span>
+                <span>Cyber Events</span>
               </Link>
             </div>
 
             <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Cyber Colloquy is the website for the Cyber Security Department at
+              Cyber Events is the website for the Cyber Security Department at
               Shah and Anchor Kutchhi Engineering College.
             </div>
           </div>
