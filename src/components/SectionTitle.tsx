@@ -5,7 +5,9 @@ interface SectionTitleProps {
   preTitle?: string;
   title?: string;
   align?: "left" | "center";
+  className?: string;
   children?: React.ReactNode;
+  
 }
 
 export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
