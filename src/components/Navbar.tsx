@@ -170,7 +170,7 @@ export const Navbar = () => {
                 ))}
               </div>
             </MenuItem>
-            <MenuItem setActive={setActiveMenu} active={activeMenu} item="About Us" href="/about">
+            <MenuItem setActive={setActiveMenu} active={activeMenu} item="About Us" href="/department-info">
               <div className="flex flex-col p-2">
                 <HoveredLink href="/department-info">Department Info</HoveredLink>
                 <HoveredLink href="/about">Faculty</HoveredLink>
