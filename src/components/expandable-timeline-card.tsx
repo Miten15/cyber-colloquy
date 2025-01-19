@@ -6,7 +6,7 @@ import { cn } from '../../lib/utils'
 import Image from 'next/image'
 
 export interface Activity {
-  time?: string
+  time?: string;
   date?: string
   description: string
   image: string
