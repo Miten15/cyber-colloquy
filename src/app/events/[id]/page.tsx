@@ -9,11 +9,14 @@ import { Sponsors } from "@/components/Sponsors";
 import Timeline from "../../../components/Timeline";
 import { motion } from "framer-motion";
 import { TimelineEvent } from "@/components/expandable-timeline-card";
+import { RegisterButton } from "@/components/register-button";
+import { useAuth } from "@clerk/nextjs";
 
 export default function EventDetailsPage() {
   const { id } = useParams();
   const eventId = parseInt(id as string, 10);
   const event = events.find((event) => event.id === eventId);
+  const { isSignedIn, isLoaded } = useAuth();
 
   if (!event) {
     return (
@@ -64,7 +67,7 @@ export default function EventDetailsPage() {
       >
         {event.images && event.images.length > 0 && (
           <Image
-            src={event.images[0]}
+            src={event.images?.[0] || "/placeholder.svg"}
             alt={event.title}
             fill
             className="object-cover object-center"
@@ -149,6 +152,7 @@ export default function EventDetailsPage() {
         </h3>
         <Timeline events={timelineEvents} />
       </motion.div>
+      {isLoaded && <RegisterButton eventId={eventId.toString()} />}
     </Container>
   );
 }

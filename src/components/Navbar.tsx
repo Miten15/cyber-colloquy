@@ -1,10 +1,17 @@
-"use client";
+'use client';
+
+import { useState } from "react";
+import { useAuth } from "@clerk/nextjs";
 import Link from "next/link";
-import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
+import ThemeChanger from "./DarkSwitch";
+import { AuthModal } from "./auth-modal";
 
 export const Navbar = () => {
+  const { isSignedIn, isLoaded } = useAuth();
+  const [showAuthModal, setShowAuthModal] = useState(false);
+
   const navigation = [
     { label: "Achievements", href: "/achievements" },
     { label: "Patents", href: "/patents" },
@@ -33,16 +40,27 @@ export const Navbar = () => {
           </span>
         </Link>
 
-        {/* get started  */}
+        {/* Auth button and theme changer */}
         <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
           <ThemeChanger />
           <div className="hidden mr-3 lg:flex nav__item">
-            <Link
-              href="/"
-              className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
-            >
-              Get Started
-            </Link>
+            {isLoaded && (
+              isSignedIn ? (
+                <Link
+                  href="/dashboard"
+                  className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
+                >
+                  Dashboard
+                </Link>
+              ) : (
+                <button
+                  onClick={() => setShowAuthModal(true)}
+                  className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
+                >
+                  Get Started
+                </button>
+              )
+            )}
           </div>
         </div>
 
@@ -85,12 +103,14 @@ export const Navbar = () => {
                       {item.label}
                     </Link>
                   ))}
-                  <Link
-                    href="/"
-                    className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
-                  >
-                    Get Started
-                  </Link>
+                  {isLoaded && !isSignedIn && (
+                    <button
+                      onClick={() => setShowAuthModal(true)}
+                      className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
+                    >
+                      Get Started
+                    </button>
+                  )}
                 </>
               </Disclosure.Panel>
             </>
@@ -113,6 +133,13 @@ export const Navbar = () => {
           </ul>
         </div>
       </nav>
+
+      <AuthModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+        mode="sign-in"
+      />
     </div>
   );
 };
+
